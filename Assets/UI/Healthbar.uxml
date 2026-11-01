@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Healthbar.uss?fileID=7433441132597879392&amp;guid=ae50a75436bb42649807a34c7b0533ec&amp;type=3#Healthbar"/>
+    <ui:VisualElement class="hb-plate" name="HealthBarPlate">
+        <!-- Horní řádek: Týmový puntík + Jméno + Číslo HP -->
+        <ui:VisualElement class="hb-header">
+            <ui:VisualElement class="hb-pip-ring">
+                <ui:VisualElement class="hb-team-pip" name="TeamPip" />
+            </ui:VisualElement>
+            <ui:Label text="BEAN" name="NameLabel" class="hb-name-text" />
+            <ui:Label text="100 HP" name="HpNumberLabel" class="hb-hp-text" />
+        </ui:VisualElement>
+
+        <!-- Koryto lišty: Ghost bar + Hlavní fill + Lesk + Rysky -->
+        <ui:VisualElement class="hb-slot">
+            <ui:VisualElement class="hb-ghost-fill" name="GhostBar" />
+            <ui:VisualElement class="hb-main-fill" name="MainBarFill" />
+            <ui:VisualElement class="hb-glass-shine" />
+            <ui:VisualElement class="hb-notches">
+                <ui:VisualElement class="hb-notch" style="left: 25%;" />
+                <ui:VisualElement class="hb-notch" style="left: 50%;" />
+                <ui:VisualElement class="hb-notch" style="left: 75%;" />
+            </ui:VisualElement>
+            <!-- Skrytý standardní ProgressBar pro plnou zpětnou kompatibilitu -->
+            <ui:ProgressBar value="100" title="" name="HealthBar" picking-mode="Ignore" enabled="true" class="hb-hidden-progress" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

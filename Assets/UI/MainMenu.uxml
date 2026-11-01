@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="MainMenu.uss" />
+    <ui:VisualElement name="root-container" class="root-container">
+        <ui:VisualElement name="menu-card" class="menu-card">
+            <!-- Header section with Title (No background) -->
+            <ui:VisualElement name="header-container" class="header-container">
+                <ui:Label name="title-shadow" text="MOKA WARS" class="title-label title-shadow" />
+                <ui:Label name="title-label" text="MOKA WARS" class="title-label title-front" />
+            </ui:VisualElement>
+
+            <!-- Main Button Menu (Big chunky pixel buttons) -->
+            <ui:VisualElement name="main-buttons-container" class="buttons-container">
+                <ui:Button name="btn-play" text="START GAME" class="pixel-btn pixel-btn-primary" />
+                <ui:Button name="btn-options" text="SETTINGS" class="pixel-btn" />
+                <ui:Button name="btn-credits" text="CREDITS" class="pixel-btn" />
+                <ui:Button name="btn-quit" text="QUIT GAME" class="pixel-btn pixel-btn-danger" />
+            </ui:VisualElement>
+
+            <!-- Settings Panel (Hidden by default) -->
+            <ui:VisualElement name="options-container" class="options-container hidden">
+                <ui:Label text="SETTINGS" class="panel-header-label" />
+                
+                <ui:VisualElement class="option-row">
+                    <ui:Label text="MUSIC VOLUME" class="option-label" />
+                    <ui:Slider name="slider-music" low-value="0" high-value="100" value="80" class="pixel-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="option-row">
+                    <ui:Label text="SFX VOLUME" class="option-label" />
+                    <ui:Slider name="slider-sfx" low-value="0" high-value="100" value="90" class="pixel-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="option-row">
+                    <ui:Label text="FULLSCREEN" class="option-label" />
+                    <ui:Toggle name="toggle-fullscreen" value="true" class="pixel-toggle" />
+                </ui:VisualElement>
+
+                <ui:Button name="btn-back-options" text="BACK" class="pixel-btn pixel-btn-back" />
+            </ui:VisualElement>
+
+            <!-- Credits Panel (Hidden by default) -->
+            <ui:VisualElement name="credits-container" class="credits-container hidden">
+                <ui:Label text="CREDITS" class="panel-header-label" />
+                <ui:Label text="MOKA WARS" class="credit-highlight" />
+                <ui:Label text="A Retro Pixel Art Game" class="credit-text" />
+                <ui:Label text="Font: Thaleah by Tiny Worlds" class="credit-subtext" />
+                <ui:Button name="btn-back-credits" text="BACK" class="pixel-btn pixel-btn-back" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

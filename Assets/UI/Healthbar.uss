@@ -1,0 +1,139 @@
+* {
+    -unity-font: url("project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF");
+    -unity-font-definition: url("project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF");
+}
+
+:root {
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Hlavní rámeček (Badge) ve stylu Worms / Coffee Moka palety */
+.hb-plate {
+    width: 140px;
+    background-color: rgba(18, 14, 12, 0.94);
+    border-width: 2px;
+    border-color: #3b2b1d;
+    border-radius: 5px;
+    padding: 3px 6px 4px 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Horní lišta se jménem a číslem */
+.hb-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.hb-pip-ring {
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    background-color: #120e0a;
+    border-width: 1px;
+    border-color: #3b2b1d;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.hb-team-pip {
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #2ecc71;
+}
+
+.hb-name-text {
+    color: #ffd447;
+    font-size: 11px;
+    -unity-text-align: middle-left;
+    letter-spacing: 0.5px;
+    flex-grow: 1;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.95);
+    margin: 0;
+    padding: 0;
+}
+
+.hb-hp-text {
+    color: #ffffff;
+    font-size: 10px;
+    -unity-text-align: middle-right;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.95);
+    margin: 0;
+    padding: 0;
+}
+
+/* Zářez/koryto pro ukazatel životů */
+.hb-slot {
+    width: 100%;
+    height: 10px;
+    background-color: #0d0a08;
+    border-width: 1.5px;
+    border-color: #261b12;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Červený/oranžový delayed ghost damage bar */
+.hb-ghost-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e67e22;
+    border-radius: 1px;
+}
+
+/* Hlavní dynamický pruh zdraví */
+.hb-main-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2ecc71;
+    border-radius: 1px;
+}
+
+/* Skleněný lesk nahoře pro 3D efekt */
+.hb-glass-shine {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Taktické dělicí rysky (čtvrtiny HP) */
+.hb-notches {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hb-notch {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Skrytý standardní ProgressBar pro kompatibilitu */
+.hb-hidden-progress {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
